@@ -26,7 +26,7 @@
 - name: Create app container
   docker_container:
     name: "{{ application_name }}-app"
-    image: "linuxserver/arm32v7-latest"
+    image: "linuxserver/jackett:arm32v7-latest"
     restart_policy: "always"
     cleanup: true
     pull: true
