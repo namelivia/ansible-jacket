@@ -6,6 +6,7 @@
       - docker_network_name is defined
       - cloudwatch_region is defined
       - cloudwatch_log_group is defined
+      - backup_day is defined
 
 - name: Create the dockernetwork
   docker_network:
@@ -47,3 +48,13 @@
       PGID: "1000"
       TZ: "Europe/Madrid"
       AUTO_UPDATE: "true"
+
+- name: Setup file backups
+  include_role:
+    name: ansible-backups
+    tasks_from: setup-file-backups
+
+- name: Setup S3 backups
+  include_role:
+    name: ansible-backups
+    tasks_from: setup-s3-backups

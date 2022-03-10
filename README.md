@@ -15,3 +15,4 @@ roles:
 ## Required variables
  - `cloudwatch_region` Cloudwatch region to send the logs to.
  - `cloudwatch_log_group` Cloudwatch log group to send the logs to.
+ - `backup_day` Day of the week in which the config will be backed up.
