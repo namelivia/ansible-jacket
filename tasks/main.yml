@@ -52,7 +52,3 @@
   include_role:
     name: ansible-backups
     tasks_from: setup-s3-backups
-
-- name: Restart proxy
-  shell: 
-    cmd: docker restart proxy
