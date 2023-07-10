@@ -21,7 +21,7 @@
 - name: Create app container
   docker_container:
     name: "{{ application_name }}-app"
-    image: "linuxserver/jackett:arm32v7-latest"
+    image: "linuxserver/jackett:arm32v7-0.21.352"
     restart_policy: "always"
     pull: true
     log_driver: "awslogs"
